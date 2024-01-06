@@ -14,8 +14,9 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="About"
+        description="Welcome to Modder Coder IT Solution Private Limited, your partner in developing advanced web and mobile applications from business ideas!
+        Modder Coder IT Solution specializes in providing cutting-edge custom software development services tailored to our clients' specific requirements. Our objective is to empower businesses by making their unique ideas a reality through cutting-edge online and mobile applications. We take pride in creating solutions that not only meet but surpass our clients' expectations, thanks to our team of competent and experienced developers."
       />
       <AboutSectionOne />
       <AboutSectionTwo />
