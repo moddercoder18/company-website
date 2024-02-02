@@ -40,9 +40,9 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   Premier support
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                {/* <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 Modder Coder's amazing service will elevate your software experience above and beyond the usual. Our committed team provides unparalleled help, allowing you to focus on the success of your business.
-                </p>
+                </p> */}
               </div>
               {/* <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
