@@ -11,11 +11,11 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
 
   let ratingIcons = [];
   for (let index = 0; index < star; index++) {
-    ratingIcons.push(
-      <span key={index} className="text-yellow">
-        {starIcon}
-      </span>,
-    );
+    // ratingIcons.push(
+    //   <span key={index} className="text-yellow">
+    //     {starIcon}
+    //   </span>,
+    // );
   }
 
   return (
