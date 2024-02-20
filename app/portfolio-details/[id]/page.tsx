@@ -1,17 +1,20 @@
-"use client";
 
-import SharePost from "@/components/Portfolio/SharePost";
+"use client"
+
 import TagButton from "@/components/Portfolio/TagButton";
 import Image from "next/image";
 import portfolioData from '@/components/Portfolio/portfolioData';
-
-import { Metadata } from "next";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { Fragment } from 'react'
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "PortfolioDetailsPage  Page | Free Next.js Template for Startup and SaaS",
+//   description: "This is Portfolio Details Page for Startup Nextjs Template",
+// };
 
 
-
-
-const PortfolioDetailsPage = () => {
+const PortfolioDetailsPage = ({ }) => {
   const router = useRouter();
   const { id }: any = useParams()
   console.log("router ID checking....", router,)
@@ -131,7 +134,7 @@ const PortfolioDetailsPage = () => {
                     Technology-Driven Strategy
                   </h3>
                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    An approach driven by technology formed the foundation of Green Mind's evolution. By employing a full-stack development methodology, the application's infrastructure was built upon the MERN stack (MongoDB, Express.js, React, Node.js), which guarantees a resilient and expandable structure. The integration of Docker, GitLab CI/CD, and Amazon ECS served to augment the architecture and deployment procedures of the application.
+                    An approach driven by technology formed the foundation of Green Mind&apos;s evolution. By employing a full-stack development methodology, the application&apos;s infrastructure was built upon the MERN stack (MongoDB, Express.js, React, Node.js), which guarantees a resilient and expandable structure. The integration of Docker, GitLab CI/CD, and Amazon ECS served to augment the architecture and deployment procedures of the application.
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
                     {details?.technologies.map((ele, index) => <li key={index} className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
@@ -142,15 +145,15 @@ const PortfolioDetailsPage = () => {
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Project Emphasis
                   </h3>
-                  {Array.isArray(details?.projectEmphasis) && details?.projectEmphasis.map((ele) => (
-                    <>
+                  {Array.isArray(details?.projectEmphasis) && details?.projectEmphasis.map((ele, index) => (
+                    <Fragment key={index}>
                       <h4 className="text-base mb-10 font-bold leading-tight text-black dark:text-white sm:text-lg sm:leading-tight lg:text-base lg:leading-tight xl:text-lg xl:leading-tight">
                         {ele?.title}
                       </h4>
                       <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                         {ele?.descripion}
                       </p>
-                    </>
+                    </Fragment>
                   ))}
 
 
@@ -306,7 +309,7 @@ const PortfolioDetailsPage = () => {
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
-                        {details?.tags.map((ele) => <TagButton text={ele} />)}
+                        {details?.tags.map((ele, index) => <TagButton key={index} text={ele} />)}
                       </div>
                     </div>
                   </div>
