@@ -303,7 +303,7 @@ const PortfolioDetailsPage = ({ }) => {
                     </span>
                   </div>
 
-                  <div className="items-center justify-between sm:flex">
+                  <div className="items-center justify-between sm:flex sm:flex-wrap ">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
